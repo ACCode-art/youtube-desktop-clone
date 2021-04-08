@@ -24,6 +24,12 @@ body {
 }
 
 .header .header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 0.34;
       -ms-flex: 0.34;
           flex: 0.34;
@@ -31,10 +37,17 @@ body {
 
 .header .header__left .burger {
   width: 20px;
+  height: 20px;
 }
 
 .header .header__left .logo {
-  width: 90px;
+  height: 50px;
+}
+
+.header .header__left p {
+  font-weight: thin;
+  color: white;
+  margin-left: -20px;
 }
 
 .header .header__mid {
@@ -47,13 +60,22 @@ body {
 }
 
 .header .header__mid input {
+  font-size: 17px;
+  padding-left: 10px;
+  color: #b1b1b1;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 33px;
+  height: 31px;
+  background-color: #161616;
+  border: 1px solid #414141;
+  outline: none;
 }
 
 .header .header__mid .searchIcon {
+  color: rgba(255, 255, 255, 0.493);
+  background-color: #414141;
+  border: 1px solid #414141;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,8 +85,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70px;
-  height: 33px;
+  width: 60px;
+  height: 31px;
+}
+
+.header .header__mid .searchIcon .fa-search {
+  font-size: 12px;
 }
 
 .header .header__right {
@@ -240,6 +266,265 @@ body {
   font-weight: bold;
 }
 
+.channel {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #444444;
+}
+
+.channel .channel__left {
+  -webkit-box-flex: 0.05;
+      -ms-flex: 0.05;
+          flex: 0.05;
+}
+
+.channel .channel__left .ChannelAvatar {
+  width: 48px;
+  border-radius: 25px;
+}
+
+.channel .channel__right {
+  -webkit-box-flex: 0.95;
+      -ms-flex: 0.95;
+          flex: 0.95;
+}
+
+.channel .channel__right .channel__rightT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 51px;
+}
+
+.channel .channel__right .channel__rightT .channel__rightTL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+}
+
+.channel .channel__right .channel__rightT .channel__rightTL .channel__rightName {
+  font-size: 15px;
+}
+
+.channel .channel__right .channel__rightT .channel__rightTL .channel__rightSubs {
+  font-size: 12px;
+  color: #b1b1b1;
+}
+
+.channel .channel__right .channel__rightT .channel__rightTR {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.channel .channel__right .channel__rightT .channel__rightTR .subscribeButton {
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 106px;
+  background-color: #be1a1a;
+  height: 37px;
+}
+
+.channel .channel__right .channel__rightB {
+  width: 50%;
+}
+
+.channel .channel__right .channel__rightB p {
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+.channel .channel__right .channel__rightB .showMore {
+  color: #b1b1b1;
+}
+
+.channelInput .channelInput__info {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.channelInput .channelInput__info .sortBy {
+  color: #b1b1b1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+}
+
+.channelInput .channelInput__info .sortBy p {
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.channelInput .channelInput__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.channelInput .channelInput__input .comment__avatar {
+  width: 40px;
+  border-radius: 40px;
+}
+
+.channelInput .channelInput__input input {
+  margin-left: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #161616;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.channelInput .input__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 37px;
+  margin-bottom: 20px;
+}
+
+.channelInput .input__buttons .cancel__button {
+  background-color: #161616;
+  color: grey;
+}
+
+.channelInput .input__buttons .comment__button {
+  background-color: grey;
+  color: #161616;
+}
+
+.channelInput .input__buttons button {
+  font-weight: bold;
+  height: 100%;
+  width: 100px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.allComments .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.allComments .comment .comment__left img {
+  width: 35px;
+  border-radius: 35px;
+}
+
+.allComments .comment .comment__right {
+  margin-left: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.allComments .comment .comment__right .comment__channelName {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.allComments .comment .comment__right .comment__body {
+  font-size: 15px;
+}
+
+.allComments .comment .comment__right span {
+  color: #b1b1b1;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.allComments .comment .comment__right .comment__interaction {
+  color: #b1b1b1;
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.allComments .comment .comment__right .comment__interaction .mr {
+  margin-right: 10px;
+}
+
+.allComments .comment .comment__right .comment__interaction .comment__likes {
+  font-size: 12px;
+}
+
+.allComments .comment .comment__right .comment__interaction .reply {
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.allComments .comment .comment__right .comment__replies {
+  font-size: 13px;
+  color: #2793e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95px;
+}
+
+.allComments .comment .comment__right .comment__replies .comment__viewReplies {
+  font-weight: bold;
+}
+
 .main__right {
   -webkit-box-flex: 0.25;
       -ms-flex: 0.25;
@@ -251,32 +536,61 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: white;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.main__right .suggestedVideo:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .main__right .suggestedVideo .suggestedVideo__left {
-  -webkit-box-flex: 0.45;
-      -ms-flex: 0.45;
-          flex: 0.45;
+  width: 168px;
   background-color: whitesmoke;
 }
 
+.main__right .suggestedVideo .suggestedVideo__left img {
+  width: 100%;
+  height: 100%;
+}
+
 .main__right .suggestedVideo .suggestedVideo__right {
-  -webkit-box-flex: 0.55;
-      -ms-flex: 0.55;
-          flex: 0.55;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding-left: 10px;
+}
+
+.main__right .suggestedVideo .suggestedVideo__right .suggestedVideo__title {
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 5px;
 }
 
 .main__right .suggestedVideo .suggestedVideo__right .suggestedVideo__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #b1b1b1;
+  font-size: 13px;
+  padding-bottom: 3px;
+}
+
+.main__right .suggestedVideo .suggestedVideo__right .suggestedVideo__name .fa-check {
+  font-size: 9px;
+  margin-left: 5px;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px;
 }
 
 .main__right .suggestedVideo .suggestedVideo__right .suggestedVideo__views {
   color: #b1b1b1;
+  font-size: 13px;
 }
 /*# sourceMappingURL=index.css.map */
