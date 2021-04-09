@@ -241,8 +241,12 @@ body {
           justify-content: center;
           align-items: center;
           width: 106px;
-          background-color: rgb(190, 26, 26);
+          background-color: rgb(229, 39, 45);
           height: 37px;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -291,12 +295,14 @@ body {
     }
 
     input {
+      color: white;
+      font-size: 15px;
       margin-left: 20px;
       flex: 1;
       background-color: $body-color;
       outline: none;
       border: none;
-      border-bottom: 1px solid $grey-color;
+      border-bottom: 1px solid rgb(48, 48, 48);
     }
   }
 
@@ -312,7 +318,7 @@ body {
     }
 
     .comment__button {
-      background-color: grey;
+      background-color: rgb(96, 96, 96);
       color: $body-color;
     }
 
@@ -396,16 +402,12 @@ body {
   flex: 0.25;
 
   .suggestedVideo {
+    position: relative;
     height: 94px;
     display: flex;
     margin-bottom: 10px;
     color: white;
     transition: 300ms;
-
-    &:hover {
-      opacity: 0.8;
-      cursor: pointer;
-    }
 
     .suggestedVideo__left {
       width: 168px;
@@ -446,4 +448,31 @@ body {
       }
     }
   }
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.fa:hover {
+  cursor: pointer;
+}
+
+.suggestedVideo__overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .play {
+    color: rgba(255, 255, 255, 0.877);
+    font-size: 30px;
+    margin-left: 75px;
+    margin-top: 30px;
+  }
+}
+
+.suggestedVideo__overlay:hover {
+  opacity: 1;
+  cursor: pointer;
 }

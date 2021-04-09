@@ -352,8 +352,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 106px;
-  background-color: #be1a1a;
+  background-color: #e5272d;
   height: 37px;
+}
+
+.channel .channel__right .channel__rightT .channel__rightTR .subscribeButton:hover {
+  cursor: pointer;
 }
 
 .channel .channel__right .channel__rightB {
@@ -408,6 +412,8 @@ body {
 }
 
 .channelInput .channelInput__input input {
+  color: white;
+  font-size: 15px;
   margin-left: 20px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -415,7 +421,7 @@ body {
   background-color: #161616;
   outline: none;
   border: none;
-  border-bottom: 1px solid #b1b1b1;
+  border-bottom: 1px solid #303030;
 }
 
 .channelInput .input__buttons {
@@ -435,7 +441,7 @@ body {
 }
 
 .channelInput .input__buttons .comment__button {
-  background-color: grey;
+  background-color: #606060;
   color: #161616;
 }
 
@@ -532,6 +538,7 @@ body {
 }
 
 .main__right .suggestedVideo {
+  position: relative;
   height: 94px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,11 +547,6 @@ body {
   color: white;
   -webkit-transition: 300ms;
   transition: 300ms;
-}
-
-.main__right .suggestedVideo:hover {
-  opacity: 0.8;
-  cursor: pointer;
 }
 
 .main__right .suggestedVideo .suggestedVideo__left {
@@ -592,5 +594,32 @@ body {
 .main__right .suggestedVideo .suggestedVideo__right .suggestedVideo__views {
   color: #b1b1b1;
   font-size: 13px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.fa:hover {
+  cursor: pointer;
+}
+
+.suggestedVideo__overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.suggestedVideo__overlay .play {
+  color: rgba(255, 255, 255, 0.877);
+  font-size: 30px;
+  margin-left: 75px;
+  margin-top: 30px;
+}
+
+.suggestedVideo__overlay:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,8 @@
 const mainRight = document.querySelector('.main__right');
 const allComments = document.querySelector('.allComments');
 
+const numberOfComments = document.querySelector('.numberOfComments');
+
 const suggestedVideoArray = [
   {
     videoName: 'Another Nature Video',
@@ -23,12 +25,120 @@ const suggestedVideoArray = [
     img:
       'https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   },
+  {
+    videoName: 'How to travel',
+    channelName: 'travelblog',
+    views: '3M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'Why lions are lazy',
+    channelName: 'Allthenature',
+    views: '6M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'When the moon crashed into earth (not clickbait)',
+    channelName: "don't click",
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'This is a great video with content',
+    channelName: 'Great Content',
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'How to travel',
+    channelName: 'travelblog',
+    views: '3M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'Why lions are lazy',
+    channelName: 'Allthenature',
+    views: '6M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'When the moon crashed into earth (not clickbait)',
+    channelName: "don't click",
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'This is a great video with content',
+    channelName: 'Great Content',
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'How to travel',
+    channelName: 'travelblog',
+    views: '3M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'Why lions are lazy',
+    channelName: 'Allthenature',
+    views: '6M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'When the moon crashed into earth (not clickbait)',
+    channelName: "don't click",
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'This is a great video with content',
+    channelName: 'Great Content',
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'How to travel',
+    channelName: 'travelblog',
+    views: '3M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    videoName: 'Why lions are lazy',
+    channelName: 'Allthenature',
+    views: '6M - 1 year ago',
+    img:
+      'https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
+  {
+    videoName: 'When the moon crashed into earth (not clickbait)',
+    channelName: "don't click",
+    views: '6M - 6 months ago',
+    img:
+      'https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  },
 ];
 
 suggestedVideoArray.map((video) => {
   const { videoName, channelName, views, img } = video;
 
   const HTML = `  <div class="suggestedVideo">
+   <div class="suggestedVideo__overlay">
+      <i class="fa fa-play play" aria-hidden="true"></i>
+    </div>
     <div class="suggestedVideo__left">
       <img
         src=${img}
@@ -52,43 +162,43 @@ suggestedVideoArray.map((video) => {
 const commentsArray = [
   {
     avatar:
-      'https://images.pexels.com/photos/789555/pexels-photo-789555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      'https://images.pexels.com/photos/1346347/pexels-photo-1346347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     channelName: 'MonkeyLad',
+    commentBody:
+      'aspernatur blanditiis sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
+    date: '2 months ago',
+  },
+  {
+    avatar:
+      'https://images.pexels.com/photos/7439731/pexels-photo-7439731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    channelName: 'TalkingPolitics',
+    commentBody:
+      'pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
+    date: '3 months ago',
+  },
+  {
+    avatar:
+      'https://images.pexels.com/photos/1988686/pexels-photo-1988686.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    channelName: 'Turnedtheweansagainstus',
     commentBody:
       ' illo libero, voluptatibus vel nemo porro sunt voluptas! Non obcaecati quia ut veniam, aspernatur blanditiis sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
     date: '4 months ago',
   },
   {
     avatar:
-      'https://images.pexels.com/photos/789555/pexels-photo-789555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    channelName: 'MonkeyLad',
+      'https://images.pexels.com/photos/2748239/pexels-photo-2748239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    channelName: 'blahem',
     commentBody:
-      ' illo libero, voluptatibus vel nemo porro sunt voluptas! Non obcaecati quia ut veniam, aspernatur blanditiis sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
-    date: '4 months ago',
+      'sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore  modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
+    date: '1 year ago',
   },
   {
     avatar:
-      'https://images.pexels.com/photos/789555/pexels-photo-789555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    channelName: 'MonkeyLad',
+      'https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    channelName: 'darkweb',
     commentBody:
       ' illo libero, voluptatibus vel nemo porro sunt voluptas! Non obcaecati quia ut veniam, aspernatur blanditiis sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
-    date: '4 months ago',
-  },
-  {
-    avatar:
-      'https://images.pexels.com/photos/789555/pexels-photo-789555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    channelName: 'MonkeyLad',
-    commentBody:
-      ' illo libero, voluptatibus vel nemo porro sunt voluptas! Non obcaecati quia ut veniam, aspernatur blanditiis sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
-    date: '4 months ago',
-  },
-  {
-    avatar:
-      'https://images.pexels.com/photos/789555/pexels-photo-789555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    channelName: 'MonkeyLad',
-    commentBody:
-      ' illo libero, voluptatibus vel nemo porro sunt voluptas! Non obcaecati quia ut veniam, aspernatur blanditiis sapiente est harum possimus ex itaque pariatur provident veritatis explicabo nostrum, temporibus tempore totam beatae magni. Ratione eaque cumque placeat deleniti modi quidem similique, obcaecati illum cupiditate quas distinctio, repellat magnam laudantium ipsam?',
-    date: '4 months ago',
+    date: '2 years ago',
   },
 ];
 
@@ -122,5 +232,9 @@ commentsArray.map((user) => {
   </div>
 </div>`;
 
-  allComments.insertAdjacentHTML('afterbegin', HTML);
+  allComments.insertAdjacentHTML('beforeend', HTML);
 });
+
+const commentsLength = commentsArray.length;
+
+numberOfComments.innerHTML = `${commentsLength} comments`;
