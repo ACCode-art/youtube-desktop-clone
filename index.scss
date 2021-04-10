@@ -103,10 +103,9 @@ body {
   color: white;
 
   .main__left {
-    flex: 0.74;
-
+    flex: 0.98;
     .main__video {
-      height: 720px;
+      width: 100%;
       background-color: cadetblue;
 
       img {
@@ -143,18 +142,23 @@ body {
         color: rgb(128, 128, 128);
 
         .main__views {
-          flex: 0.72;
+          flex: 0.5;
           font-size: 14px;
           color: $grey-color;
         }
 
         .main__interaction {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-end;
           align-items: center;
-          flex: 0.28;
+          flex: 0.5;
           height: 100%;
+
+          .fa-ellipsis-h {
+            margin-left: 25px;
+          }
           .main__likeDislike {
+            font-size: 23px;
             color: $grey-color;
             height: 100%;
             display: flex;
@@ -165,12 +169,8 @@ body {
             }
             p {
               margin: 0 7px;
-
               font-size: 15px;
             }
-          }
-          .fa {
-            font-size: 23px;
           }
 
           .main__more {
@@ -178,6 +178,11 @@ body {
             height: 100%;
             display: flex;
             align-items: center;
+
+            .fa {
+              font-size: 23px;
+              margin-left: 25px;
+            }
 
             p {
               margin-left: 5px;
@@ -197,7 +202,7 @@ body {
   border-bottom: 1px solid rgb(68, 68, 68);
 
   .channel__left {
-    flex: 0.05;
+    width: 60px;
 
     .ChannelAvatar {
       width: 48px;
@@ -206,7 +211,7 @@ body {
   }
 
   .channel__right {
-    flex: 0.95;
+    flex: 1;
 
     .channel__rightT {
       display: flex;
@@ -252,7 +257,7 @@ body {
     }
 
     .channel__rightB {
-      width: 50%;
+      width: 550px;
 
       p {
         font-size: 15px;
@@ -399,7 +404,7 @@ body {
 }
 
 .main__right {
-  flex: 0.25;
+  width: 400px;
 
   .suggestedVideo {
     position: relative;
@@ -475,4 +480,10 @@ button:hover {
 .suggestedVideo__overlay:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1800px) {
+  .main {
+    padding: 0 1.5%;
+  }
 }
