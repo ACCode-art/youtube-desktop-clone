@@ -19,7 +19,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 56px;
-  padding: 0 40px;
+  padding: 0 25px;
   background-color: #212121;
 }
 
@@ -36,8 +36,8 @@ body {
 }
 
 .header .header__left .burger {
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
+  color: white;
 }
 
 .header .header__left .logo {

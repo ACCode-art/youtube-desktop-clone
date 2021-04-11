@@ -18,16 +18,18 @@ body {
   display: flex;
   align-items: center;
   height: 56px;
-  padding: 0 40px;
+  padding: 0 25px;
   background-color: $header-color;
 
   .header__left {
     display: flex;
     align-items: center;
     flex: 0.34;
+
     .burger {
-      width: 20px;
-      height: 20px;
+      font-size: 20px;
+
+      color: rgb(255, 255, 255);
     }
     .logo {
       height: 50px;
