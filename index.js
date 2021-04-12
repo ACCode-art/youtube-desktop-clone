@@ -1,5 +1,6 @@
 const mainRight = document.querySelector('.main__right');
 const allComments = document.querySelector('.allComments');
+const mainInput = document.querySelector('.main__input');
 
 const numberOfComments = document.querySelector('.numberOfComments');
 
@@ -238,3 +239,8 @@ commentsArray.map((user) => {
 const commentsLength = commentsArray.length;
 
 numberOfComments.innerHTML = `${commentsLength} comments`;
+
+mainInput.addEventListener('click', () => {
+  mainInput.style.borderBottom = '1px solid rgb(255, 255, 255)';
+  console.log('hi');
+});

@@ -17,6 +17,7 @@ body {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 56px;
   padding: 0 25px;
   background-color: $header-color;
@@ -24,7 +25,7 @@ body {
   .header__left {
     display: flex;
     align-items: center;
-    flex: 0.34;
+    width: 300px;
 
     .burger {
       font-size: 20px;
@@ -42,9 +43,8 @@ body {
   }
 
   .header__mid {
-    flex: 0.36;
+    width: 37%;
     display: flex;
-
     input {
       font-size: 17px;
       padding-left: 10px;
@@ -72,17 +72,17 @@ body {
   }
 
   .header__right {
-    flex: 0.34;
+    width: 300px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
     .header__icons {
+      width: 60%;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      width: 30%;
       .icon {
         color: white;
         font-size: 20px;
@@ -213,7 +213,7 @@ body {
   }
 
   .channel__right {
-    flex: 1;
+    width: 100%;
 
     .channel__rightT {
       display: flex;
@@ -259,7 +259,7 @@ body {
     }
 
     .channel__rightB {
-      width: 550px;
+      width: 60%;
 
       p {
         font-size: 15px;
@@ -302,6 +302,7 @@ body {
     }
 
     input {
+      transition: 500ms;
       color: white;
       font-size: 15px;
       margin-left: 20px;
@@ -484,8 +485,36 @@ button:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1800px) {
+@media screen and (max-width: 1050px) {
+  .main__right {
+    display: none;
+  }
+  .main__left {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1800px) {
   .main {
     padding: 0 1.5%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .main {
+    padding-left: 25px;
+  }
+  .header__mid {
+    display: none !important;
+  }
+
+  .channel__rightB {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .main__views {
+    display: none;
   }
 }

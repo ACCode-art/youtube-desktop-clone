@@ -18,6 +18,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 56px;
   padding: 0 25px;
   background-color: #212121;
@@ -30,9 +33,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 0.34;
-      -ms-flex: 0.34;
-          flex: 0.34;
+  width: 300px;
 }
 
 .header .header__left .burger {
@@ -51,9 +52,7 @@ body {
 }
 
 .header .header__mid {
-  -webkit-box-flex: 0.36;
-      -ms-flex: 0.36;
-          flex: 0.36;
+  width: 37%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,9 +93,7 @@ body {
 }
 
 .header .header__right {
-  -webkit-box-flex: 0.34;
-      -ms-flex: 0.34;
-          flex: 0.34;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +106,7 @@ body {
 }
 
 .header .header__right .header__icons {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +116,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
 }
 
 .header .header__right .header__icons .icon {
@@ -290,9 +287,7 @@ body {
 }
 
 .channel .channel__right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 100%;
 }
 
 .channel .channel__right .channel__rightT {
@@ -365,7 +360,7 @@ body {
 }
 
 .channel .channel__right .channel__rightB {
-  width: 550px;
+  width: 60%;
 }
 
 .channel .channel__right .channel__rightB p {
@@ -416,6 +411,8 @@ body {
 }
 
 .channelInput .channelInput__input input {
+  -webkit-transition: 500ms;
+  transition: 500ms;
   color: white;
   font-size: 15px;
   margin-left: 20px;
@@ -625,9 +622,36 @@ button:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1800px) {
+@media screen and (max-width: 1050px) {
+  .main__right {
+    display: none;
+  }
+  .main__left {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1800px) {
   .main {
     padding: 0 1.5%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .main {
+    padding-left: 25px;
+  }
+  .header__mid {
+    display: none !important;
+  }
+  .channel__rightB {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .main__views {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */
