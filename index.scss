@@ -7,7 +7,7 @@
 }
 
 $body-color: rgb(22, 22, 22);
-$header-color: rgb(33, 33, 33);
+$header-color: rgb(40, 40, 40);
 $grey-color: rgb(177, 177, 177);
 
 body {
@@ -33,7 +33,8 @@ body {
       color: rgb(255, 255, 255);
     }
     .logo {
-      height: 50px;
+      height: 55px;
+      margin-left: 28px;
     }
     p {
       font-weight: thin;
@@ -85,7 +86,7 @@ body {
 
       .icon {
         color: white;
-        font-size: 20px;
+        font-size: 18px;
       }
 
       .avatar {
@@ -483,6 +484,15 @@ button:hover {
 .suggestedVideo__overlay:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }
 
 @media screen and (max-width: 1050px) {

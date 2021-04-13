@@ -23,7 +23,7 @@ body {
           justify-content: space-between;
   height: 56px;
   padding: 0 25px;
-  background-color: #212121;
+  background-color: #282828;
 }
 
 .header .header__left {
@@ -42,7 +42,8 @@ body {
 }
 
 .header .header__left .logo {
-  height: 50px;
+  height: 55px;
+  margin-left: 28px;
 }
 
 .header .header__left p {
@@ -120,7 +121,7 @@ body {
 
 .header .header__right .header__icons .icon {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .header .header__right .header__icons .avatar {
@@ -620,6 +621,17 @@ button:hover {
 .suggestedVideo__overlay:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
 }
 
 @media screen and (max-width: 1050px) {

@@ -4,6 +4,8 @@ const mainInput = document.querySelector('.main__input');
 
 const numberOfComments = document.querySelector('.numberOfComments');
 
+const commentButton = document.querySelector('.comment__button');
+
 const suggestedVideoArray = [
   {
     videoName: 'Another Nature Video',
@@ -160,7 +162,7 @@ suggestedVideoArray.map((video) => {
   mainRight.insertAdjacentHTML('afterbegin', HTML);
 });
 
-const commentsArray = [
+let commentsArray = [
   {
     avatar:
       'https://images.pexels.com/photos/1346347/pexels-photo-1346347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -203,6 +205,50 @@ const commentsArray = [
   },
 ];
 
+commentButton.addEventListener('click', () => {
+  const comment__body = {
+    avatar:
+      'https://images.pexels.com/photos/2423932/pexels-photo-2423932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    channelName: 'Brenda Winegarden',
+    commentBody: mainInput.value,
+    date: new Date().toDateString(),
+  };
+
+  commentsArray.push(comment__body);
+
+  const HTML = `<div class="comment">
+  <div class="comment__left">
+    <img
+      src=${comment__body.avatar}
+      alt=""
+    />
+  </div>
+  <div class="comment__right">
+    <p class="comment__channelName">
+      ${comment__body.channelName}<span>${comment__body.date}</span>
+    </p>
+    <p class="comment__body">
+    ${comment__body.commentBody}
+    </p>
+    <div class="comment__interaction">
+      <i class="fa fa-thumbs-up mr" aria-hidden="true"></i>
+      <p class="comment__likes mr"></p>
+      <i class="fa fa-thumbs-down mr" aria-hidden="true"></i>
+      <p class="reply">REPLY</p>
+    </div>
+    <div class="comment__replies">
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+      <p class="comment__viewReplies">View replies</p>
+    </div>
+  </div>
+</div>`;
+
+  allComments.insertAdjacentHTML('afterbegin', HTML);
+  commentsLength += 1;
+  numberOfComments.innerHTML = `${commentsLength} comments`;
+  mainInput.value = '';
+});
+
 commentsArray.map((user) => {
   const { avatar, channelName, commentBody, date } = user;
 
@@ -223,7 +269,7 @@ commentsArray.map((user) => {
     <div class="comment__interaction">
       <i class="fa fa-thumbs-up mr" aria-hidden="true"></i>
       <p class="comment__likes mr">32</p>
-      <i class="fa fa-thumbs-up mr" aria-hidden="true"></i>
+      <i class="fa fa-thumbs-down mr" aria-hidden="true"></i>
       <p class="reply">REPLY</p>
     </div>
     <div class="comment__replies">
@@ -236,11 +282,10 @@ commentsArray.map((user) => {
   allComments.insertAdjacentHTML('beforeend', HTML);
 });
 
-const commentsLength = commentsArray.length;
+let commentsLength = commentsArray.length;
 
 numberOfComments.innerHTML = `${commentsLength} comments`;
 
 mainInput.addEventListener('click', () => {
   mainInput.style.borderBottom = '1px solid rgb(255, 255, 255)';
-  console.log('hi');
 });
