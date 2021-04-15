@@ -6,6 +6,11 @@ const numberOfComments = document.querySelector('.numberOfComments');
 
 const commentButton = document.querySelector('.comment__button');
 
+const likeIcon = document.querySelector('.likeIcon');
+const dislikeIcon = document.querySelector('.dislikeIcon');
+
+const video = (document.querySelector('video').volume = 0.3);
+
 const suggestedVideoArray = [
   {
     videoName: 'Another Nature Video',
@@ -288,4 +293,55 @@ numberOfComments.innerHTML = `${commentsLength} comments`;
 
 mainInput.addEventListener('click', () => {
   mainInput.style.borderBottom = '1px solid rgb(255, 255, 255)';
+});
+
+let like__count = document.querySelector('.like__count');
+let dislike__count = document.querySelector('.dislike__count');
+
+let isLiked = false;
+let isDisliked = false;
+
+let likeCount = 185;
+let dislikeCount = 54;
+
+like__count.textContent = likeCount;
+dislike__count.textContent = dislikeCount;
+
+likeIcon.addEventListener('click', () => {
+  if (isLiked === true) {
+    like__count.textContent = likeCount -= 1;
+    likeIcon.classList.remove('color-white');
+    isLiked = false;
+  } else if (isLiked === false && isDisliked === false) {
+    like__count.textContent = likeCount += 1;
+    isLiked = true;
+    likeIcon.classList.add('color-white');
+  } else if (isLiked === false && isDisliked === true) {
+    like__count.textContent = likeCount += 1;
+    isLiked = true;
+    isDisliked = false;
+    likeIcon.classList.add('color-white');
+    dislikeIcon.classList.remove('color-white');
+    dislike__count.textContent = dislikeCount -= 1;
+  }
+});
+
+dislikeIcon.addEventListener('click', () => {
+  if (isDisliked === true) {
+    dislike__count.textContent = dislikeCount -= 1;
+    dislikeIcon.classList.remove('color-white');
+    isDisliked = false;
+  } else if (isDisliked === false && isLiked === true) {
+    dislike__count.textContent = dislikeCount += 1;
+    like__count.textContent = likeCount -= 1;
+    isDisliked = true;
+    isLiked = false;
+    likeIcon.classList.remove('color-white');
+    dislikeIcon.classList.add('color-white');
+  } else if (isDisliked === false && isLiked === false) {
+    dislike__count.textContent = dislikeCount += 1;
+    isDisliked = true;
+    isLiked = false;
+    dislikeIcon.classList.add('color-white');
+  }
 });
