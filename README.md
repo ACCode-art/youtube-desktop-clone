@@ -1,5 +1,7 @@
 A Youtube clone (desktop) created using HTML, CSS and JavaScript
 
+A demo version of the project can be used here https://youtube-desktop-clone.netlify.app/
+
 ## Current Functionality
 
 <li>Responds much like the original website</li>
